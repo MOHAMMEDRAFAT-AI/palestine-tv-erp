@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+vendor/
+.next/
+.cache/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+*.log
+
+# Build
+dist/
+build/
+*.tsbuildinfo
+
+# Laravel
+backend/storage/framework/cache/data/*
+backend/storage/framework/sessions/*
+backend/storage/framework/views/*
+backend/storage/logs/*
+!backend/storage/app/public
+
+# Mock server
+mock-server/node_modules/
+
+# Supabase
+supabase/.temp/

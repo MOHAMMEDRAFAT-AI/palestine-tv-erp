@@ -1,0 +1,36 @@
+{
+    "name": "palestinetv/erp-backend",
+    "type": "project",
+    "description": "Palestine TV Enterprise Resource Planning System - Backend API",
+    "require": {
+        "php": "^8.2",
+        "laravel/framework": "^12.0",
+        "tymon/jwt-auth": "^2.1",
+        "laravel/sanctum": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi",
+            "@php artisan jwt:secret --ansi"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    }
+}
